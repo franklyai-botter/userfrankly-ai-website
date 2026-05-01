@@ -1,0 +1,57 @@
+# Suggested Repo Tree
+
+```txt
+neuralnautic-website/
+  README.md
+  package.json
+  next.config.js
+  tailwind.config.ts
+  tsconfig.json
+  src/
+    app/
+      layout.tsx
+      page.tsx
+      globals.css
+      leistungen/
+        page.tsx
+      use-cases/
+        page.tsx
+      methode/
+        page.tsx
+      ki-tool-kompass/
+        page.tsx
+      wissen/
+        page.tsx
+      ueber-mich/
+        page.tsx
+      kontakt/
+        page.tsx
+    components/
+      layout/
+        Header.tsx
+        Footer.tsx
+      sections/
+        HeroSection.tsx
+        ProblemSection.tsx
+        SolutionSection.tsx
+        ServicesOverview.tsx
+        UseCaseOverview.tsx
+        MethodTimeline.tsx
+        TrustSection.tsx
+        CTASection.tsx
+        ContactSection.tsx
+      ui/
+        ServiceCard.tsx
+        UseCaseCard.tsx
+        MethodStep.tsx
+        GlossaryItem.tsx
+        SectionHeading.tsx
+    data/
+      content.ts
+      navigation.ts
+    lib/
+      utils.ts
+  public/
+    logo.svg
+    favicon.ico
+```

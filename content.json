@@ -1,0 +1,170 @@
+{
+  "brand": "NeuralNautic",
+  "owner": "Frank Schütt",
+  "positioning": "Pragmatische KI-Beratung für den Mittelstand",
+  "primaryCTA": "KI-Potenzialcheck buchen",
+  "secondaryCTA": "Leistungen ansehen",
+  "targetAudience": [
+    "Geschäftsführung",
+    "IT",
+    "Fachabteilungen",
+    "Datenschutzverantwortliche",
+    "Betriebsrat",
+    "Operative Teams"
+  ],
+  "navigation": [
+    {
+      "label": "Start",
+      "href": "/"
+    },
+    {
+      "label": "Leistungen",
+      "href": "/leistungen"
+    },
+    {
+      "label": "Use Cases",
+      "href": "/use-cases"
+    },
+    {
+      "label": "Methode",
+      "href": "/methode"
+    },
+    {
+      "label": "KI Tool Kompass",
+      "href": "/ki-tool-kompass"
+    },
+    {
+      "label": "Wissen",
+      "href": "/wissen"
+    },
+    {
+      "label": "Über mich",
+      "href": "/ueber-mich"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakt"
+    }
+  ],
+  "home": {
+    "hero": {
+      "headline": "Pragmatische KI für den Mittelstand. Von der Idee zum messbaren Pilotprojekt.",
+      "subheadline": "Ich helfe Unternehmen, künstliche Intelligenz sicher, verständlich und operativ nutzbar zu machen — mit klaren Use Cases, kontrollierter Pilotierung, Automatisierung, Governance und Schulung.",
+      "primaryCTA": "KI-Potenzialcheck buchen",
+      "secondaryCTA": "Leistungen ansehen"
+    },
+    "promise": "Keine KI-Spielereien. Keine Buzzword-Show. Sondern konkrete Lösungen für echte Geschäftsprozesse.",
+    "problem": {
+      "headline": "Viele Unternehmen wollen KI nutzen — aber wissen nicht, wo sie sinnvoll starten sollen.",
+      "painPoints": [
+        "Unklare Use Cases",
+        "Zu viele Tools, zu wenig Orientierung",
+        "Unsicherheit bei Datenschutz und Compliance",
+        "Fehlende interne KI-Kompetenz",
+        "Angst vor Fehlinvestitionen",
+        "Keine klare Roadmap für Umsetzung und Skalierung"
+      ]
+    }
+  },
+  "services": [
+    {
+      "title": "KI-Potenzialanalyse",
+      "description": "Identifikation sinnvoller KI-Anwendungsfälle mit Aufwand-Nutzen-Bewertung und priorisierter Roadmap.",
+      "cta": "Potenzialanalyse anfragen"
+    },
+    {
+      "title": "Controlled Pilot",
+      "description": "Kontrollierter Praxistest eines KI-Use-Cases mit klaren Zielen, Metriken und Skalierungsempfehlung.",
+      "cta": "Pilotprojekt starten"
+    },
+    {
+      "title": "KI-Automatisierung",
+      "description": "Automatisierung wiederkehrender Prozesse mit KI, Workflows, APIs und passenden Tools.",
+      "cta": "Automatisierung prüfen"
+    },
+    {
+      "title": "KI-Governance",
+      "description": "Regeln, Rollen und Prozesse für sicheren, nachvollziehbaren und verantwortungsvollen KI-Einsatz.",
+      "cta": "Governance besprechen"
+    },
+    {
+      "title": "KI-Schulung",
+      "description": "Workshops und Enablement für Führungskräfte, Fachabteilungen und AI Champions.",
+      "cta": "Schulung anfragen"
+    },
+    {
+      "title": "KI Tool Kompass",
+      "description": "Bewertung und Auswahl passender KI-Tools nach Nutzen, Kosten, Datenschutz und Integrationsfähigkeit.",
+      "cta": "Tool-Auswahl prüfen lassen"
+    }
+  ],
+  "useCases": {
+    "Vertrieb und Marketing": [
+      "Lead-Qualifizierung",
+      "Automatische Angebotserstellung",
+      "Follow-up-E-Mails",
+      "Content-Unterstützung",
+      "CRM-Zusammenfassungen"
+    ],
+    "Verwaltung und Backoffice": [
+      "Belegmanagement",
+      "Dokumentenanalyse",
+      "E-Mail-Klassifizierung",
+      "Interne Wissenssuche",
+      "Protokolle und Zusammenfassungen"
+    ],
+    "Kundenservice": [
+      "Voicebot als intelligenter Anrufbeantworter",
+      "FAQ-Bot",
+      "Ticket-Vorqualifizierung",
+      "Termin- und Rückrufmanagement",
+      "Service-Zusammenfassungen"
+    ],
+    "Management und Strategie": [
+      "KI-Roadmaps",
+      "Tool-Bewertung",
+      "Reporting-Unterstützung",
+      "Wissensmanagement",
+      "Risikoanalyse"
+    ]
+  },
+  "method": [
+    {
+      "phase": "Verstehen",
+      "result": "Klares Bild der Ausgangssituation"
+    },
+    {
+      "phase": "Priorisieren",
+      "result": "Priorisierte KI-Roadmap"
+    },
+    {
+      "phase": "Pilotieren",
+      "result": "Messbarer Praxistest"
+    },
+    {
+      "phase": "Automatisieren",
+      "result": "Operativer KI-Workflow"
+    },
+    {
+      "phase": "Skalieren",
+      "result": "Nachhaltige Einführung mit Governance und Schulung"
+    }
+  ],
+  "seo": {
+    "title": "KI-Beratung für den Mittelstand | NeuralNautic",
+    "description": "Pragmatische KI-Beratung für Unternehmen: Potenzialanalyse, Controlled Pilot, KI-Automatisierung, Governance, Schulung und Tool-Auswahl.",
+    "keywords": [
+      "KI-Beratung Mittelstand",
+      "KI-Automatisierung",
+      "KI-Potenzialanalyse",
+      "KI-Governance",
+      "Controlled AI Pilot",
+      "KI-Schulung Unternehmen",
+      "KI Tool Auswahl",
+      "Voicebot Unternehmen",
+      "RAG Wissensbot",
+      "KI im Vertrieb",
+      "KI im Backoffice"
+    ]
+  }
+}
