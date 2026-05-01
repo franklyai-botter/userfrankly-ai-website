@@ -1,0 +1,57 @@
+/* Shared card chrome for preview/*.html */
+@import url('../colors_and_type.css');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-1);
+  color: var(--fg-1);
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.card {
+  width: 700px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  background: var(--bg-1);
+  position: relative;
+}
+
+.card--ivory {
+  background: var(--ivory);
+  color: var(--ink-deep);
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.label-xs {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--fg-3);
+}
+
+.mono-xs {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-3);
+}
+
+.swatch {
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border-2);
+  overflow: hidden;
+  position: relative;
+}

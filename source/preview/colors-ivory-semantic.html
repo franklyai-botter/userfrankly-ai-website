@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:28px 24px;background:#0A2028}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.block{border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border-2)}
+.ivory{background:#F5F2EB;padding:18px;min-height:80px}
+.ivory .t{font-family:var(--font-serif);font-style:italic;font-size:20px;color:#0A2028;margin:0 0 4px}
+.ivory .m{font-family:var(--font-mono);font-size:10px;color:#707078}
+.sems{display:flex;gap:0}
+.sem{flex:1;aspect-ratio:1/0.9;display:flex;flex-direction:column;justify-content:flex-end;padding:10px 12px}
+.sem .n{font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:.04em;color:#061419}
+.sem .h{font-family:var(--font-mono);font-size:9.5px;margin-top:2px;opacity:.75;color:#061419}
+.title{font-family:var(--font-serif);font-style:italic;font-size:18px;color:var(--fg-1);margin:0 0 4px}
+.sub{font-size:11px;color:var(--fg-3);margin:0 0 16px}
+</style></head><body><div class="card">
+  <p class="title">Ivory & Signal</p>
+  <p class="sub">Warm neutrals for light editorial moments, and three semantic signal hues.</p>
+  <div class="grid2">
+    <div class="block">
+      <div class="ivory" style="background:#F5F2EB"><div class="t">Ivory · canvas</div><div class="m">#F5F2EB</div></div>
+      <div class="ivory" style="background:#EFEBE0"><div class="t">Ivory soft</div><div class="m">#EFEBE0</div></div>
+      <div class="ivory" style="background:#E4DFD1"><div class="t">Parchment</div><div class="m">#E4DFD1</div></div>
+    </div>
+    <div class="block" style="display:flex;flex-direction:column">
+      <div class="sem" style="background:#6FEFC7;flex:1"><div class="n">OK · signal</div><div class="h">#6FEFC7</div></div>
+      <div class="sem" style="background:#F5C97A;flex:1"><div class="n">Warn</div><div class="h">#F5C97A</div></div>
+      <div class="sem" style="background:#F08A7A;flex:1"><div class="n">Alert</div><div class="h">#F08A7A</div></div>
+    </div>
+  </div>
+</div></body></html>

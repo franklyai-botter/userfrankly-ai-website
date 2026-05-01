@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:0;min-height:360px;position:relative;overflow:hidden;width:700px;aspect-ratio:16/9}
+.bg{position:absolute;inset:0;background:url('../assets/bg-neural-network.png') center/cover;opacity:.85}
+.v{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 10%,rgba(6,20,25,.85) 85%)}
+.lockup{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:28px}
+.halo-star{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(111,239,245,.28) 0%,rgba(63,212,224,.1) 45%,rgba(63,212,224,0) 72%);pointer-events:none}
+.halo-mono{position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(216,192,158,.16) 0%,rgba(216,192,158,.05) 45%,rgba(216,192,158,0) 72%);pointer-events:none}
+.star{width:210px;height:210px;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,0,0,.55))}
+.mono{width:170px;height:auto;object-fit:contain;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5))}
+.word{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-family:'Inter';font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.42em;color:#CDCED2;padding-left:.42em;opacity:.75}
+.caption{position:absolute;bottom:8px;right:14px;font-family:'JetBrains Mono';font-size:9px;color:rgba(205,206,210,.35);letter-spacing:.12em}
+.coord{position:absolute;bottom:8px;left:14px;font-family:'JetBrains Mono';font-size:9px;color:rgba(205,206,210,.35);letter-spacing:.12em}
+.corner{position:absolute;width:18px;height:18px;border:1px solid rgba(205,206,210,.35)}
+.c-tl{top:14px;left:14px;border-right:0;border-bottom:0}
+.c-tr{top:14px;right:14px;border-left:0;border-bottom:0}
+.c-bl{bottom:14px;left:14px;border-right:0;border-top:0}
+.c-br{bottom:14px;right:14px;border-left:0;border-top:0}
+</style></head><body><div class="card">
+  <div class="bg"></div><div class="v"></div>
+  <div class="corner c-tl"></div><div class="corner c-tr"></div><div class="corner c-bl"></div><div class="corner c-br"></div>
+  <div class="lockup">
+    <div style="position:relative;display:flex;align-items:center;justify-content:center">
+      <div class="halo-star"></div>
+      <img class="star" src="../assets/logo-star.png?v=20" alt="Neural Nautic star"/>
+    </div>
+    <div style="position:relative;display:flex;align-items:center;justify-content:center">
+      <div class="halo-mono"></div>
+      <img class="mono" src="../assets/logo-monogram.png?v=22" alt="NN monogram"/>
+    </div>
+  </div>
+  <div class="word">Neural Nautic</div>
+  <div class="coord">52.3702° N · 4.8952° E</div>
+  <div class="caption">lockup · horizontal</div>
+</div></body></html>

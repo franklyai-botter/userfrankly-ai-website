@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:30px 32px;background:#0A2028;min-height:160px}
+.title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#F5F5F2;margin:0 0 18px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.b{font-family:'Inter';font-size:11px;font-weight:500;letter-spacing:.08em;padding:4px 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px}
+.b-dot::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block}
+.b-neutral{background:rgba(205,206,210,.08);color:#CDCED2;border:1px solid rgba(205,206,210,.18)}
+.b-accent{background:rgba(63,212,224,.12);color:#6FEFF5;border:1px solid rgba(63,212,224,.3)}
+.b-ok{background:rgba(111,239,199,.1);color:#6FEFC7;border:1px solid rgba(111,239,199,.3)}
+.b-warn{background:rgba(245,201,122,.1);color:#F5C97A;border:1px solid rgba(245,201,122,.3)}
+.b-alert{background:rgba(240,138,122,.1);color:#F08A7A;border:1px solid rgba(240,138,122,.3)}
+.b-caps{text-transform:uppercase;letter-spacing:.18em;font-size:10px}
+</style></head><body><div class="card">
+  <p class="title">Tags &amp; Status</p>
+  <div class="row">
+    <span class="b b-neutral">Atelier</span>
+    <span class="b b-accent b-dot">Luminous</span>
+    <span class="b b-ok b-dot">In port</span>
+    <span class="b b-warn b-dot">Drifting</span>
+    <span class="b b-alert b-dot">Off course</span>
+    <span class="b b-neutral b-caps">N · 52°</span>
+    <span class="b b-accent b-caps">Meridian</span>
+  </div>
+</div></body></html>

@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:28px 32px;background:#0A2028;min-height:180px}
+.title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#F5F5F2;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.nav{background:#0E2B36;border:1px solid rgba(205,206,210,.12);border-radius:8px;padding:14px 18px;display:flex;align-items:center;gap:18px;backdrop-filter:blur(12px)}
+.nav img{width:26px;height:26px;object-fit:contain}
+.brand{font-family:'Italiana';font-size:15px;color:#F5F5F2;letter-spacing:.06em}
+.links{display:flex;gap:14px;margin-left:auto;font-family:'Inter';font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:#CDCED2}
+.links a{color:inherit;text-decoration:none}
+.links a.on{color:#3FD4E0}
+.ab{background:rgba(63,212,224,.12);color:#6FEFF5;font-family:'Inter';font-size:11px;padding:4px 10px;border-radius:999px;border:1px solid rgba(63,212,224,.3);font-weight:500;letter-spacing:.08em}
+.lbl{font-family:'JetBrains Mono';font-size:10px;color:#707078;margin-top:6px;text-align:center}
+</style></head><body><div class="card">
+  <p class="title">Navigation · dark &amp; translucent</p>
+  <div class="grid">
+    <div>
+      <div class="nav">
+        <img src="../assets/logo-star.png?v=20" alt="" style="width:28px;height:28px;object-fit:contain"/>
+        <div class="brand">Neural Nautic</div>
+        <div class="links"><a class="on">Atelier</a><a>Log</a><a>Charts</a></div>
+      </div>
+      <div class="lbl">top nav · sticky</div>
+    </div>
+    <div>
+      <div class="nav" style="border-color:rgba(63,212,224,.3);box-shadow:0 0 24px rgba(63,212,224,.08)">
+        <span class="ab">✦ Atelier</span>
+        <div class="brand" style="font-size:13px">Meridian · N 52°</div>
+        <div class="links" style="gap:10px"><a>Log</a><a class="on">Charts</a></div>
+      </div>
+      <div class="lbl">crumb + status</div>
+    </div>
+  </div>
+</div></body></html>

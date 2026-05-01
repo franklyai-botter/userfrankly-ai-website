@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:28px 32px;background:#0A2028;min-height:180px}
+.title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#F5F5F2;margin:0 0 14px}
+.row{display:flex;gap:14px;align-items:stretch}
+.note{flex:1;background:#0E2B36;border:1px solid rgba(205,206,210,.12);border-left:2px solid;border-radius:4px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.note .t{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:#F5F5F2;margin:0 0 4px;line-height:1.2}
+.note .b{font-family:'Inter';font-size:12px;line-height:1.5;color:#CDCED2;margin:0}
+.ico{width:18px;height:18px;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.info{border-left-color:#3FD4E0}.info .ico{stroke:#3FD4E0}
+.ok{border-left-color:#6FEFC7}.ok .ico{stroke:#6FEFC7}
+.warn{border-left-color:#F5C97A}.warn .ico{stroke:#F5C97A}
+.alert{border-left-color:#F08A7A}.alert .ico{stroke:#F08A7A}
+</style></head><body><div class="card">
+  <p class="title">Notices · four tones</p>
+  <div class="row">
+    <div class="note info"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg><div><p class="t">Calibrated</p><p class="b">The bearing holds true.</p></div></div>
+    <div class="note ok"><svg class="ico" viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"/></svg><div><p class="t">In port</p><p class="b">All hands accounted.</p></div></div>
+  </div>
+  <div style="height:10px"></div>
+  <div class="row">
+    <div class="note warn"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l10 17H2z"/><path d="M12 10v4M12 18h.01"/></svg><div><p class="t">Drifting</p><p class="b">A gentle recalibration is due.</p></div></div>
+    <div class="note alert"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg><div><p class="t">Off course</p><p class="b">The log has lost its bearing.</p></div></div>
+  </div>
+</div></body></html>

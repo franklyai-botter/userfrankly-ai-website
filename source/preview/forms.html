@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"><style>
+.card{padding:30px 32px;background:#0A2028;min-height:220px}
+.title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#F5F5F2;margin:0 0 18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.lbl{font-family:'Inter';font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:#9C9CA4;margin-bottom:6px;display:block}
+.field{background:#0E2B36;border:1px solid rgba(205,206,210,.18);border-radius:4px;padding:12px 14px;font-family:'Inter';font-size:14px;color:#F5F5F2;width:100%;box-sizing:border-box;transition:all 180ms}
+.field::placeholder{color:#707078}
+.field.focus{border-color:#3FD4E0;box-shadow:0 0 0 2px rgba(63,212,224,.2),0 0 16px rgba(63,212,224,.15)}
+.hint{font-family:'Inter';font-size:11px;color:#707078;margin-top:6px}
+.chk{display:flex;align-items:center;gap:10px;font-family:'Inter';font-size:13px;color:#E6E7EA}
+.box{width:16px;height:16px;border:1px solid rgba(205,206,210,.3);border-radius:3px;background:#0E2B36;position:relative}
+.box.on{background:#3FD4E0;border-color:#3FD4E0}
+.box.on::after{content:'';position:absolute;inset:3px;border:solid #061419;border-width:0 2px 2px 0;width:4px;height:8px;transform:rotate(45deg);top:1px;left:4px}
+</style></head><body><div class="card">
+  <p class="title">Form Inputs</p>
+  <div class="grid">
+    <div>
+      <label class="lbl">Vessel Name</label>
+      <input class="field" placeholder="e.g. North Tide" value="Meridian" />
+      <div class="hint">Appears on your log.</div>
+    </div>
+    <div>
+      <label class="lbl">Bearing · focused</label>
+      <input class="field focus" value="N 52° 22′" />
+      <div class="hint" style="color:#3FD4E0">Calibrated · signal bloom active</div>
+    </div>
+    <div class="chk"><div class="box on"></div><span>Subscribe to the log</span></div>
+    <div class="chk"><div class="box"></div><span>Include charts &amp; atlas</span></div>
+  </div>
+</div></body></html>
