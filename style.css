@@ -167,7 +167,9 @@ h2 {
 }
 
 .intro h1 {
-  font-size: clamp(70px, 8.4vw, 128px);
+  font-size: clamp(44px, 5.6vw, 78px);
+  line-height: 1.04;
+  max-width: 820px;
 }
 
 .copy p {
