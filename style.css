@@ -133,8 +133,11 @@ h2 {
 }
 
 .intro {
-  grid-template-columns: minmax(0, 1fr) minmax(360px, .55fr);
+  grid-template-columns: minmax(420px, .9fr) minmax(420px, .7fr);
   align-items: center;
+  gap: 26px;
+  max-width: 1260px;
+  margin: 52px auto 0;
 }
 
 .copy,
@@ -149,6 +152,12 @@ h2 {
   padding: 22px;
   display: grid;
   align-content: space-between;
+}
+
+.intro .copy {
+  min-height: 320px;
+  padding: 22px 24px;
+  align-content: start;
 }
 
 .page:not(.intro) .copy {
@@ -186,6 +195,11 @@ section.intro .copy h1.intro-title {
   line-height: 1.55;
 }
 
+.intro .copy p {
+  max-width: 640px;
+  margin-top: 14px;
+}
+
 .promise {
   display: flex;
   flex-wrap: wrap;
@@ -215,6 +229,12 @@ section.intro .copy h1.intro-title {
   margin-top: 24px;
 }
 
+.intro .explain {
+  align-self: center;
+  margin-top: 0;
+  gap: 12px;
+}
+
 .page:not(.intro) .explain {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
@@ -239,7 +259,7 @@ section.intro .copy h1.intro-title {
 
 .scenario-card {
   position: relative;
-  min-height: 112px;
+  min-height: 96px;
   padding-left: 18px;
 }
 
