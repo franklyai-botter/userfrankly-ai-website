@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-05-01)
 Phase: 1 of 3 (Hero Visual)
 Plan: 0 of ? in current phase
 Status: Ready to plan
-Last activity: 2026-05-01 — Roadmap erstellt, Phasenstruktur definiert
+Last activity: 2026-05-02 - Completed quick task 260502-d66: Impressum und Datenschutz Seiten + Footer-Links
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -55,6 +55,12 @@ None yet.
 ### Blockers/Concerns
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260502-d66 | Impressum und Datenschutz Seiten + Footer-Links | 2026-05-02 | 97bb8b5 | [260502-d66-impressum-und-datenschutz-seiten-footer-](./quick/260502-d66-impressum-und-datenschutz-seiten-footer-/) |
 
 ## Session Continuity
 
