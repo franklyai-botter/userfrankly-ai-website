@@ -829,3 +829,110 @@ p { max-width: 62ch; }
     opacity: 1 !important;
   }
 }
+
+/* ---- Legal Pages ---- */
+.nn-legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-xxl);
+}
+
+.nn-legal h1 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: var(--space-sm);
+  color: var(--nn-text-primary);
+}
+
+.nn-legal .nn-legal__subtitle {
+  font-size: 0.85rem;
+  color: var(--nn-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  max-width: none;
+}
+
+.nn-legal h2 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nn-cyan);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.nn-legal h3 {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nn-text-secondary);
+  margin-top: var(--space-md);
+  margin-bottom: 6px;
+}
+
+.nn-legal p {
+  font-size: 0.9rem;
+  color: var(--nn-text-secondary);
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+  max-width: none;
+}
+
+.nn-legal ul {
+  list-style: disc;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.nn-legal ul li {
+  font-size: 0.9rem;
+  color: var(--nn-text-secondary);
+  line-height: 1.8;
+}
+
+.nn-legal a {
+  color: var(--nn-cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.nn-legal a:hover { color: var(--nn-text-primary); }
+
+.nn-legal__address {
+  font-style: normal;
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.nn-legal__address p {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+.nn-legal__divider {
+  width: 40px;
+  height: 2px;
+  background: var(--nn-border-strong);
+  margin: var(--space-lg) 0;
+}
+
+/* ---- Footer Legal Links ---- */
+.nn-footer__nav {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.nn-footer__nav a {
+  font-size: 0.75rem;
+  color: var(--nn-text-muted);
+  transition: color 0.2s;
+}
+
+.nn-footer__nav a:hover { color: var(--nn-cyan); }
