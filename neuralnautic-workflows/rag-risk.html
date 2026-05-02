@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Risikoampel für KI-Antworten: Nutzen, Prüfen oder Stoppen — ausgerichtet an EU AI Act (VO 2024/1689) und DSGVO Art. 22. Vollständiger Audit-Trail.">
+  <title>Antworten sichern ✦ Neural Nautic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/nn.css">
+</head>
+<body>
+
+<nav class="nn-nav">
+  <a class="nn-nav__brand" href="index.html">
+    <img src="assets/img/logo-star.svg" alt="" width="28" height="28">
+    <span>Neural Nautic</span>
+  </a>
+  <button class="nn-nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nn-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nn-nav__menu" id="nn-menu">
+    <li><a href="index.html">Start</a></li>
+    <li><a href="mail-workflow.html">E-Mails entlasten</a></li>
+    <li><a href="local-analysis.html">Dokumente verstehen</a></li>
+    <li><a href="rag-model.html">RAG Modell</a></li>
+    <li><a href="rag-risk.html">Antworten sichern</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <nav class="nn-breadcrumb" aria-label="Brotkrümelpfad">
+    <a href="index.html">Start</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">Antworten sichern</span>
+  </nav>
+
+  <header class="nn-page-hero">
+    <h1>Nur antworten, wenn Quellen und Risiko stimmen.</h1>
+    <p class="nn-lead">
+      Die KI sucht zuerst Belege, formuliert daraus eine Antwort und prüft dann
+      die Wirkung. Eine Risikoampel zeigt, ob die Antwort direkt nutzbar ist,
+      geprüft werden muss oder gestoppt wird. Die Stopp-Kategorien orientieren
+      sich an den <strong>Hochrisiko-Bereichen des EU AI Act</strong>
+      (Verordnung&nbsp;2024/1689) und an <strong>Art.&nbsp;22 DSGVO</strong>
+      (Verbot vollautomatisierter Entscheidungen mit erheblicher Wirkung auf Personen).
+    </p>
+  </header>
+
+  <article class="nn-workflow-card">
+
+    <!-- SVG Diagramm -->
+    <div class="nn-workflow-card__visual">
+      <img
+        src="assets/svg/workflow-risk.svg"
+        class="nn-workflow-svg"
+        alt="3×3-Risikomatrix: Belegqualität (vollständig, lückenhaft, fehlend) gegen Adressatenkreis (intern, extern, Behörde/Recht/HR). Zellen farbkodiert grün/amber/rot. Darunter Stopp-Domänen-Pills und Compliance-Verweis."
+        width="680"
+        height="440"
+      >
+    </div>
+
+    <div class="nn-workflow-card__body">
+
+      <!-- Ampel-Kategorien -->
+      <div class="nn-ampel">
+
+        <div class="nn-ampel-item nn-ampel-item--green">
+          <div class="nn-ampel-item__header">
+            <div class="nn-ampel-item__dot" aria-hidden="true"></div>
+            <span class="nn-ampel-item__label">Nutzen</span>
+          </div>
+          <p class="nn-ampel-item__desc">
+            Gute Quellenlage, geringe Außenwirkung, interner Kontext.
+            Antwort kann direkt verwendet werden.
+          </p>
+          <p class="nn-ampel-item__examples">
+            Beispiele: Zusammenfassung interner Memos, Recherche in Produkthandbüchern,
+            Suche in Projektakten.
+          </p>
+        </div>
+
+        <div class="nn-ampel-item nn-ampel-item--amber">
+          <div class="nn-ampel-item__header">
+            <div class="nn-ampel-item__dot" aria-hidden="true"></div>
+            <span class="nn-ampel-item__label">Prüfen</span>
+          </div>
+          <p class="nn-ampel-item__desc">
+            Geschäftlich relevant, unklare Belegkette oder externe Adressaten.
+            <strong>Mensch gibt frei.</strong>
+          </p>
+          <p class="nn-ampel-item__examples">
+            Beispiele: Kundenkommunikation, Angebotsbausteine, Vertragsentwürfe,
+            Lieferantenanfragen.
+          </p>
+        </div>
+
+        <div class="nn-ampel-item nn-ampel-item--red">
+          <div class="nn-ampel-item__header">
+            <div class="nn-ampel-item__dot" aria-hidden="true"></div>
+            <span class="nn-ampel-item__label">Stoppen</span>
+          </div>
+          <p class="nn-ampel-item__desc">
+            Recht, Medizin, Personalentscheidungen, personenbezogene Daten in sensiblem
+            Kontext, IT-Security. Hier antwortet die KI <strong>gar nicht</strong> —
+            der Vorgang wird an einen verantwortlichen Menschen übergeben.
+          </p>
+          <p class="nn-ampel-item__examples">
+            Beispiele: Arbeitsrechtliche Bewertungen, Krankheitsdiagnosen, Bewerberauswahl,
+            Zugriffsentscheidungen, behördliche Auskünfte.
+          </p>
+          <div class="nn-stop-domains" aria-label="Stopp-Domänen">
+            <span class="nn-stop-domain">Recht / Anwalt</span>
+            <span class="nn-stop-domain">Medizin</span>
+            <span class="nn-stop-domain">HR / Personal</span>
+            <span class="nn-stop-domain">IT-Security</span>
+            <span class="nn-stop-domain">Behördenauskünfte</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compliance Bar -->
+      <div class="nn-compliance-bar" aria-label="Regulatorische Grundlage">
+        <span>Regulatorische Grundlage:</span>
+        <code class="nn-compliance-tag">EU AI Act VO 2024/1689</code>
+        <code class="nn-compliance-tag">DSGVO Art. 22</code>
+        <code class="nn-compliance-tag">§203 StGB</code>
+        <code class="nn-compliance-tag">BRAO</code>
+        <code class="nn-compliance-tag">ärztl. Schweigepflicht</code>
+      </div>
+
+      <!-- Tech Detail -->
+      <details class="nn-tech-detail">
+        <summary>Was steckt drin</summary>
+        <div class="nn-tech-detail__body">
+
+          <div class="nn-tech-section">
+            <h4>Klassifikation</h4>
+            <p>
+              Jede Antwort durchläuft vor der Ausgabe einen
+              <strong>Risk Classifier</strong>: Er bewertet Domäne (Recht, Medizin,
+              HR, Finanzen, Security), Adressatenkreis (intern&nbsp;/ extern&nbsp;/ Behörde)
+              und Belegqualität (vollständig&nbsp;/ lückenhaft&nbsp;/ fehlend).
+              Die Ampelfarbe ergibt sich aus dieser Matrix.
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Compliance-Mapping</h4>
+            <p>
+              Stopp-Kategorien sind direkt auf regulatorische Vorgaben abgebildet:
+              EU AI Act Anhang&nbsp;III (Hochrisiko-Systeme), DSGVO Art.&nbsp;22
+              (automatisierte Einzelentscheidungen), §203 StGB (Berufsgeheimnisse —
+              relevant für Anwalts-, Steuerberater- und Arztkanzleien),
+              branchenspezifische Regeln wie BRAO oder ärztliche Schweigepflicht.
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Audit</h4>
+            <p>
+              Jede Klassifikation, jede Freigabe und jede Stopp-Entscheidung wird
+              versioniert geloggt. Der Datenschutzbeauftragte und die interne
+              Revision bekommen einen vollständigen Vorgangs-Stempel — wer hat
+              wann mit welcher Quellenlage was freigegeben.
+            </p>
+          </div>
+
+        </div>
+      </details>
+
+    </div>
+  </article>
+
+</main>
+
+<footer class="nn-footer">
+  <div class="nn-footer__monogram">✦ NN</div>
+  <p class="nn-footer__tagline">Stille Tiefe. Präzise Navigation.</p>
+  <p class="nn-footer__legal">
+    Hosting in Deutschland · DSGVO-konform · keine Datenweitergabe an Drittländer<br>
+    <a href="mailto:frankschuettai@neuralnautic.org">frankschuettai@neuralnautic.org</a>
+  </p>
+</footer>
+
+<script src="assets/js/nn.js"></script>
+</body>
+</html>

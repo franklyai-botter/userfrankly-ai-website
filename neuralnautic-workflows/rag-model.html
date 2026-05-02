@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Retrieval-Augmented Generation (RAG): Erst Belege suchen, dann Antwort formulieren — nachvollziehbare Kette, keine Halluzinationen, vollständig auditierbar.">
+  <title>RAG Modell ✦ Neural Nautic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/nn.css">
+</head>
+<body>
+
+<nav class="nn-nav">
+  <a class="nn-nav__brand" href="index.html">
+    <img src="assets/img/logo-star.svg" alt="" width="28" height="28">
+    <span>Neural Nautic</span>
+  </a>
+  <button class="nn-nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nn-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nn-nav__menu" id="nn-menu">
+    <li><a href="index.html">Start</a></li>
+    <li><a href="mail-workflow.html">E-Mails entlasten</a></li>
+    <li><a href="local-analysis.html">Dokumente verstehen</a></li>
+    <li><a href="rag-model.html">RAG Modell</a></li>
+    <li><a href="rag-risk.html">Antworten sichern</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <nav class="nn-breadcrumb" aria-label="Brotkrümelpfad">
+    <a href="index.html">Start</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">RAG Modell</span>
+  </nav>
+
+  <header class="nn-page-hero">
+    <h1>Antworten aus den richtigen Quellen.</h1>
+    <p class="nn-lead">
+      <strong>Retrieval-Augmented Generation (RAG)</strong> verbindet eine Frage
+      mit den passenden Stellen in Ihren Dokumenten, <strong>bevor</strong> das
+      Sprachmodell antwortet. Erst werden Belege gesucht, dann entsteht ein
+      Kontextpaket, daraus formuliert die KI eine Antwort mit nachprüfbaren
+      Fundstellen. So entstehen keine Halluzinationen aus dem Modellgedächtnis —
+      sondern Antworten aus Ihrem Wissen.
+    </p>
+  </header>
+
+  <article class="nn-workflow-card">
+
+    <!-- SVG Diagramm -->
+    <div class="nn-workflow-card__visual">
+      <img
+        src="assets/svg/workflow-rag.svg"
+        class="nn-workflow-svg"
+        alt="Vektorraum-Visualisierung: Frage im Zentrum, relevante Treffer leuchten cyan. Unten: Kontext-Paket geht ins Sprachmodell, Ausgabe ist Antwort mit Quellen."
+        width="680"
+        height="400"
+      >
+    </div>
+
+    <div class="nn-workflow-card__body">
+
+      <!-- Vergleich Heute / Mit NN -->
+      <div class="nn-comparison">
+        <div class="nn-comparison__before">
+          <h3>Heute</h3>
+          <p>
+            Dokumente durchsuchen, relevante Stellen kopieren, im Sprachmodell
+            zusammenkopieren — und hoffen, dass nichts Wichtiges fehlt. Antworten
+            ohne Quelle bleiben Vermutungen.
+          </p>
+        </div>
+        <div class="nn-comparison__after">
+          <h3>Mit Neural Nautic</h3>
+          <p>
+            Frage, Quellen, Kontext und Antwort werden als
+            <strong>nachvollziehbare Kette</strong> sichtbar. Jeder Schritt ist
+            auditierbar.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Detail -->
+      <details class="nn-tech-detail">
+        <summary>Was steckt drin — für IT-Verantwortliche</summary>
+        <div class="nn-tech-detail__body">
+
+          <div class="nn-tech-section">
+            <h4>Indexierung</h4>
+            <p>
+              Dokumente werden in semantische Abschnitte (Chunks) zerlegt, mit
+              Metadaten (Quelle, Seite, Datum, Berechtigung) versehen und als
+              Embeddings (numerische Repräsentation eines Textes) in einer
+              Vektordatenbank gespeichert. Wir nutzen
+              <strong><code>pgvector</code> auf <code>Supabase</code> in EU Frankfurt</strong>.
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Retrieval</h4>
+            <p>
+              Eine Anfrage wird ebenfalls als Embedding kodiert. Die Vektordatenbank
+              liefert per <strong>Top-k-Suche</strong> die ähnlichsten Passagen.
+              Ein <strong>Reranker</strong> ordnet sie nach tatsächlicher Relevanz
+              neu — das hebt die Trefferqualität deutlich gegenüber reiner
+              Vektorähnlichkeit.
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Generierung</h4>
+            <p>
+              Erst dann wird das Sprachmodell aufgerufen — mit der Frage, den
+              abgerufenen Passagen und einer klaren Anweisung:
+              <em>Antworte ausschließlich auf Basis der gelieferten Quellen.
+              Wenn etwas fehlt, sag es.</em>
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Berechtigungsmodell</h4>
+            <p>
+              Jeder Chunk trägt die Zugriffsrechte des Quelldokuments. Ein
+              Mitarbeiter sieht in der Antwort nur, was er auch im Originalsystem
+              sehen dürfte. <strong>Row-Level-Security</strong> auf Datenbankebene
+              erzwingt das.
+            </p>
+          </div>
+
+        </div>
+      </details>
+
+    </div>
+  </article>
+
+</main>
+
+<footer class="nn-footer">
+  <div class="nn-footer__monogram">✦ NN</div>
+  <p class="nn-footer__tagline">Stille Tiefe. Präzise Navigation.</p>
+  <p class="nn-footer__legal">
+    Hosting in Deutschland · DSGVO-konform · keine Datenweitergabe an Drittländer<br>
+    <a href="mailto:frankschuettai@neuralnautic.org">frankschuettai@neuralnautic.org</a>
+  </p>
+</footer>
+
+<script src="assets/js/nn.js"></script>
+</body>
+</html>

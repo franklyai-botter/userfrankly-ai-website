@@ -1,0 +1,113 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" class="nn-workflow-svg"
+     role="img" aria-labelledby="mail-title mail-desc">
+  <title id="mail-title">E-Mail-Triage mit Human-in-the-Loop</title>
+  <desc id="mail-desc">Ablaufdiagramm: Postfach → Klassifikation → Entwurf → Freigabe durch Mensch → Versand oder Wiedervorlage</desc>
+
+  <defs>
+    <marker id="arrow-cyan-m" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#00D4D4"
+            stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+    <marker id="arrow-green-m" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#4ADE80"
+            stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+    <marker id="arrow-amber-m" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#FBBF24"
+            stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <style>
+    .nn-node rect { fill: #0D2C2C; stroke: rgba(0,212,212,0.25); stroke-width: 1.5; }
+    .nn-node--accent rect { fill: #0A2424; stroke: #00D4D4; stroke-width: 1.5; stroke-opacity: 0.6; }
+    .nn-node--gate rect { fill: rgba(251,191,36,0.08); stroke: #FBBF24; stroke-width: 2; }
+    .nn-node--success rect { fill: rgba(74,222,128,0.08); stroke: #4ADE80; stroke-width: 1.5; }
+    .nn-node__title { fill: #E8F4F4; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; text-anchor: middle; dominant-baseline: middle; }
+    .nn-node__sub { fill: #6B8989; font-family: 'Inter', sans-serif; font-size: 10px; text-anchor: middle; dominant-baseline: middle; }
+    .nn-flow-label { fill: #6B8989; font-family: 'Inter', sans-serif; font-size: 10px; text-anchor: middle; }
+    .nn-arrow-line { stroke: #00D4D4; stroke-width: 1.5; stroke-opacity: 0.7; fill: none; }
+    .nn-arrow-line--green { stroke: #4ADE80; stroke-width: 1.5; fill: none; }
+    .nn-arrow-line--flow { stroke-dasharray: 8 4; animation: nn-flow 1.5s linear infinite; }
+    @keyframes nn-flow { to { stroke-dashoffset: -12; } }
+    .nn-pulse rect { animation: nn-pulse-glow 2s ease-in-out infinite; }
+    @keyframes nn-pulse-glow {
+      0%,100% { stroke-opacity: 0.45; filter: none; }
+      50% { stroke-opacity: 1; filter: drop-shadow(0 0 8px #FBBF24); }
+    }
+    .nn-node { opacity: 0; animation: nn-fade-in 0.6s ease-out forwards; animation-delay: var(--delay, 0ms); }
+    @keyframes nn-fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @media (prefers-reduced-motion: reduce) {
+      .nn-node, .nn-pulse rect, .nn-arrow-line--flow { animation: none !important; opacity: 1 !important; }
+    }
+  </style>
+
+  <!-- Row 1: Postfach → Klassifikation → Entwurf -->
+  <g class="nn-node" style="--delay: 0ms">
+    <rect x="30" y="50" width="130" height="58" rx="8"/>
+    <text x="95" y="73" class="nn-node__title">Postfach</text>
+    <text x="95" y="91" class="nn-node__sub">M365 / Gmail API</text>
+  </g>
+
+  <line x1="160" y1="79" x2="195" y2="79" class="nn-arrow-line nn-arrow-line--flow"
+        marker-end="url(#arrow-cyan-m)"/>
+
+  <g class="nn-node nn-node--accent" style="--delay: 150ms">
+    <rect x="200" y="50" width="150" height="58" rx="8"/>
+    <text x="275" y="73" class="nn-node__title">Klassifikation</text>
+    <text x="275" y="91" class="nn-node__sub">Dringlichkeit · Absender</text>
+  </g>
+
+  <line x1="350" y1="79" x2="385" y2="79" class="nn-arrow-line nn-arrow-line--flow"
+        marker-end="url(#arrow-cyan-m)"/>
+
+  <g class="nn-node nn-node--accent" style="--delay: 300ms">
+    <rect x="390" y="50" width="160" height="58" rx="8"/>
+    <text x="470" y="73" class="nn-node__title">Entwurf erzeugen</text>
+    <text x="470" y="91" class="nn-node__sub">Stil + Thread-Kontext</text>
+  </g>
+
+  <!-- Pfeil nach unten zum Gate -->
+  <line x1="470" y1="108" x2="470" y2="168" class="nn-arrow-line"
+        marker-end="url(#arrow-amber-m)"/>
+
+  <!-- Freigabe Gate (pulsiert) -->
+  <g class="nn-node nn-node--gate nn-pulse" style="--delay: 500ms">
+    <rect x="370" y="173" width="200" height="62" rx="8"/>
+    <text x="470" y="197" class="nn-node__title">Freigabe durch Mensch</text>
+    <text x="470" y="217" class="nn-node__sub">Human-in-the-Loop ✦</text>
+  </g>
+
+  <!-- Pfeil links → Versand (freigegeben) -->
+  <line x1="370" y1="204" x2="220" y2="204" class="nn-arrow-line nn-arrow-line--green"
+        marker-end="url(#arrow-green-m)"/>
+  <text x="295" y="196" class="nn-flow-label">freigegeben</text>
+
+  <g class="nn-node nn-node--success" style="--delay: 700ms">
+    <rect x="50" y="173" width="160" height="62" rx="8"/>
+    <text x="130" y="197" class="nn-node__title">Versand</text>
+    <text x="130" y="217" class="nn-node__sub">archiviert · geloggt</text>
+  </g>
+
+  <!-- Pfeil unten → Wiedervorlage -->
+  <line x1="470" y1="235" x2="470" y2="295" class="nn-arrow-line"
+        marker-end="url(#arrow-cyan-m)"/>
+  <text x="490" y="268" class="nn-flow-label">zurückgestellt</text>
+
+  <g class="nn-node" style="--delay: 900ms">
+    <rect x="370" y="300" width="200" height="58" rx="8"/>
+    <text x="470" y="323" class="nn-node__title">Wiedervorlage</text>
+    <text x="470" y="341" class="nn-node__sub">Frist erkannt · geplant</text>
+  </g>
+
+  <!-- CRM-Kontext Label -->
+  <g class="nn-node" style="--delay: 1100ms">
+    <rect x="30" y="300" width="140" height="42" rx="6" fill="rgba(0,212,212,0.06)" stroke="rgba(0,212,212,0.2)" stroke-width="1"/>
+    <text x="100" y="321" class="nn-node__title" style="fill:#9EBDBD; font-size:10px;">CRM-Kontext</text>
+  </g>
+  <line x1="100" y1="342" x2="130" y2="204" class="nn-arrow-line" stroke-opacity="0.25" stroke-dasharray="3 4"
+        marker-end="url(#arrow-cyan-m)"/>
+</svg>

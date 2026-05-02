@@ -1,0 +1,127 @@
+<svg viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg" class="nn-workflow-svg"
+     role="img" aria-labelledby="risk-title risk-desc">
+  <title id="risk-title">Risikoampel – Klassifikationsmatrix</title>
+  <desc id="risk-desc">3×3-Matrix aus Belegqualität (vollständig, lückenhaft, fehlend) und Adressatenkreis (intern, extern, Behörde/Recht/HR). Stopp-Domänen-Pills darunter mit Compliance-Verweis.</desc>
+
+  <defs>
+    <marker id="arrow-r2" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#6B8989" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+
+  <style>
+    text { font-family:'Inter',sans-serif; }
+    .matrix-label-row { fill:#9EBDBD; font-size:10px; font-weight:500; text-anchor:middle; dominant-baseline:middle; }
+    .matrix-label-col { fill:#9EBDBD; font-size:10px; font-weight:500; text-anchor:middle; dominant-baseline:middle; }
+    .cell-label { font-size:11px; font-weight:600; text-anchor:middle; dominant-baseline:middle; }
+    .cell-sub { font-size:9px; text-anchor:middle; dominant-baseline:middle; }
+    .cell--green { fill:rgba(74,222,128,0.12); stroke:rgba(74,222,128,0.35); stroke-width:1.5; }
+    .cell--amber { fill:rgba(251,191,36,0.1); stroke:rgba(251,191,36,0.35); stroke-width:1.5; }
+    .cell--red { fill:rgba(248,113,113,0.1); stroke:rgba(248,113,113,0.35); stroke-width:1.5; }
+    .cell-text--green { fill:#4ADE80; }
+    .cell-text--amber { fill:#FBBF24; }
+    .cell-text--red { fill:#F87171; }
+    .cell-appear { opacity:0; animation: cell-in 0.5s ease-out forwards; animation-delay:var(--delay,0ms); }
+    @keyframes cell-in { from{opacity:0;} to{opacity:1;} }
+    .pill { fill:rgba(248,113,113,0.1); stroke:rgba(248,113,113,0.3); stroke-width:1; rx:999; }
+    .pill-text { fill:#F87171; font-size:11px; font-weight:500; text-anchor:middle; dominant-baseline:middle; }
+    .pill-appear { opacity:0; animation: pop-pill 0.4s ease-out forwards; animation-delay:var(--delay,0ms); }
+    @keyframes pop-pill { 0%{opacity:0;transform:scale(0.8);} 70%{opacity:1;transform:scale(1.05);} 100%{opacity:1;transform:scale(1);} }
+    .section-label { fill:#4A6868; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; }
+    .compliance-text { fill:#4A6868; font-size:9px; }
+    @media (prefers-reduced-motion:reduce) { .cell-appear,.pill-appear { animation:none !important; opacity:1 !important; } }
+  </style>
+
+  <!-- Title -->
+  <text x="340" y="22" class="section-label" text-anchor="middle">Klassifikationsmatrix · Ampelfarbe</text>
+
+  <!-- Row labels (Belegqualität) -->
+  <text x="72" y="100" class="matrix-label-row">vollständig</text>
+  <text x="72" y="168" class="matrix-label-row">lückenhaft</text>
+  <text x="72" y="236" class="matrix-label-row">fehlend</text>
+
+  <!-- Col headers (Adressatenkreis) -->
+  <text x="220" y="56" class="matrix-label-col">intern</text>
+  <text x="358" y="56" class="matrix-label-col">extern</text>
+  <text x="500" y="50" class="matrix-label-col">Behörde /</text>
+  <text x="500" y="63" class="matrix-label-col">Recht / HR</text>
+
+  <!-- Row axis label -->
+  <text x="22" y="168" class="section-label" transform="rotate(-90,22,168)" text-anchor="middle">Belegqualität</text>
+
+  <!-- Col axis label -->
+  <text x="360" y="44" class="section-label" text-anchor="middle" dy="-12">Adressatenkreis</text>
+
+  <!-- === Matrix 3×3 === -->
+  <!-- Cell size: 126×58, start x=157, start y=71 -->
+
+  <!-- Row 1: vollständig -->
+  <rect x="157" y="71" width="126" height="58" rx="6" class="cell--green cell-appear" style="--delay:100ms"/>
+  <text x="220" y="95" class="cell-label cell-text--green cell-appear" style="--delay:200ms">Nutzen</text>
+  <text x="220" y="112" class="cell-sub cell-appear" style="--delay:200ms" fill="#4ADE80" fill-opacity="0.6">🟢</text>
+
+  <rect x="295" y="71" width="126" height="58" rx="6" class="cell--amber cell-appear" style="--delay:250ms"/>
+  <text x="358" y="95" class="cell-label cell-text--amber cell-appear" style="--delay:350ms">Prüfen</text>
+  <text x="358" y="112" class="cell-sub cell-appear" style="--delay:350ms" fill="#FBBF24" fill-opacity="0.6">🟡</text>
+
+  <rect x="433" y="71" width="126" height="58" rx="6" class="cell--red cell-appear" style="--delay:400ms"/>
+  <text x="496" y="95" class="cell-label cell-text--red cell-appear" style="--delay:500ms">Stoppen</text>
+  <text x="496" y="112" class="cell-sub cell-appear" style="--delay:500ms" fill="#F87171" fill-opacity="0.6">🔴</text>
+
+  <!-- Row 2: lückenhaft -->
+  <rect x="157" y="139" width="126" height="58" rx="6" class="cell--amber cell-appear" style="--delay:300ms"/>
+  <text x="220" y="163" class="cell-label cell-text--amber cell-appear" style="--delay:400ms">Prüfen</text>
+  <text x="220" y="180" class="cell-sub cell-appear" style="--delay:400ms" fill="#FBBF24" fill-opacity="0.6">🟡</text>
+
+  <rect x="295" y="139" width="126" height="58" rx="6" class="cell--amber cell-appear" style="--delay:450ms"/>
+  <text x="358" y="163" class="cell-label cell-text--amber cell-appear" style="--delay:550ms">Prüfen</text>
+  <text x="358" y="180" class="cell-sub cell-appear" style="--delay:550ms" fill="#FBBF24" fill-opacity="0.6">🟡</text>
+
+  <rect x="433" y="139" width="126" height="58" rx="6" class="cell--red cell-appear" style="--delay:600ms"/>
+  <text x="496" y="163" class="cell-label cell-text--red cell-appear" style="--delay:700ms">Stoppen</text>
+  <text x="496" y="180" class="cell-sub cell-appear" style="--delay:700ms" fill="#F87171" fill-opacity="0.6">🔴</text>
+
+  <!-- Row 3: fehlend -->
+  <rect x="157" y="207" width="126" height="58" rx="6" class="cell--amber cell-appear" style="--delay:500ms"/>
+  <text x="220" y="231" class="cell-label cell-text--amber cell-appear" style="--delay:600ms">Prüfen</text>
+  <text x="220" y="248" class="cell-sub cell-appear" style="--delay:600ms" fill="#FBBF24" fill-opacity="0.6">🟡</text>
+
+  <rect x="295" y="207" width="126" height="58" rx="6" class="cell--red cell-appear" style="--delay:650ms"/>
+  <text x="358" y="231" class="cell-label cell-text--red cell-appear" style="--delay:750ms">Stoppen</text>
+  <text x="358" y="248" class="cell-sub cell-appear" style="--delay:750ms" fill="#F87171" fill-opacity="0.6">🔴</text>
+
+  <rect x="433" y="207" width="126" height="58" rx="6" class="cell--red cell-appear" style="--delay:800ms"/>
+  <text x="496" y="231" class="cell-label cell-text--red cell-appear" style="--delay:900ms">Stoppen</text>
+  <text x="496" y="248" class="cell-sub cell-appear" style="--delay:900ms" fill="#F87171" fill-opacity="0.6">🔴</text>
+
+  <!-- Separator -->
+  <line x1="80" y1="284" x2="600" y2="284" stroke="rgba(0,212,212,0.1)" stroke-width="1" stroke-dasharray="5 7"/>
+  <text x="340" y="298" class="section-label" text-anchor="middle">Stopp-Domänen — KI antwortet nicht</text>
+
+  <!-- Stop domain pills -->
+  <!-- Recht -->
+  <rect x="85" y="308" width="110" height="30" rx="15" class="pill pill-appear" style="--delay:1000ms"/>
+  <text x="140" y="323" class="pill-text pill-appear" style="--delay:1050ms">Recht / Anwalt</text>
+
+  <!-- Medizin -->
+  <rect x="207" y="308" width="100" height="30" rx="15" class="pill pill-appear" style="--delay:1100ms"/>
+  <text x="257" y="323" class="pill-text pill-appear" style="--delay:1150ms">Medizin</text>
+
+  <!-- HR -->
+  <rect x="319" y="308" width="120" height="30" rx="15" class="pill pill-appear" style="--delay:1200ms"/>
+  <text x="379" y="323" class="pill-text pill-appear" style="--delay:1250ms">HR / Personal</text>
+
+  <!-- Security -->
+  <rect x="451" y="308" width="110" height="30" rx="15" class="pill pill-appear" style="--delay:1300ms"/>
+  <text x="506" y="323" class="pill-text pill-appear" style="--delay:1350ms">IT-Security</text>
+
+  <!-- Compliance footer -->
+  <line x1="80" y1="360" x2="600" y2="360" stroke="rgba(0,212,212,0.08)" stroke-width="1"/>
+  <text x="340" y="378" class="compliance-text" text-anchor="middle">
+    EU AI Act (VO 2024/1689) · DSGVO Art. 22 · §203 StGB · BRAO · ärztliche Schweigepflicht
+  </text>
+  <text x="340" y="396" class="compliance-text" text-anchor="middle" fill-opacity="0.6">
+    Jede Klassifikation wird versioniert geloggt — vollständiger Audit-Trail für Datenschutzbeauftragte
+  </text>
+</svg>

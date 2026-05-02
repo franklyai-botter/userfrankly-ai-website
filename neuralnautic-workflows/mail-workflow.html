@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="E-Mail-Triage mit Human-in-the-Loop: Neural Nautic klassifiziert, priorisiert und bereitet Antwortentwürfe vor — kein Versand ohne menschliche Freigabe.">
+  <title>E-Mails entlasten ✦ Neural Nautic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/nn.css">
+</head>
+<body>
+
+<nav class="nn-nav">
+  <a class="nn-nav__brand" href="index.html">
+    <img src="assets/img/logo-star.svg" alt="" width="28" height="28">
+    <span>Neural Nautic</span>
+  </a>
+  <button class="nn-nav__toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nn-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nn-nav__menu" id="nn-menu">
+    <li><a href="index.html">Start</a></li>
+    <li><a href="mail-workflow.html">E-Mails entlasten</a></li>
+    <li><a href="local-analysis.html">Dokumente verstehen</a></li>
+    <li><a href="rag-model.html">RAG Modell</a></li>
+    <li><a href="rag-risk.html">Antworten sichern</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <nav class="nn-breadcrumb" aria-label="Brotkrümelpfad">
+    <a href="index.html">Start</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">E-Mails entlasten</span>
+  </nav>
+
+  <header class="nn-page-hero">
+    <h1>Wichtige Mails zuerst.</h1>
+    <p class="nn-lead">
+      Der Workflow liest Eingang und Thread-Kontext, klassifiziert nach Dringlichkeit
+      und bereitet Antwortentwürfe in Ihrem Schreibstil vor. Gesendet, archiviert oder
+      gelöscht wird <strong>erst nach menschlicher Freigabe (Human-in-the-Loop)</strong> —
+      kein Versand passiert autonom.
+    </p>
+  </header>
+
+  <article class="nn-workflow-card">
+
+    <!-- SVG Diagramm -->
+    <div class="nn-workflow-card__visual">
+      <img
+        src="assets/svg/workflow-mail.svg"
+        class="nn-workflow-svg"
+        alt="Ablaufdiagramm: Postfach → Klassifikation → Entwurf erzeugen → Freigabe durch Mensch (Human-in-the-Loop) → Versand oder Wiedervorlage"
+        width="680"
+        height="380"
+      >
+    </div>
+
+    <div class="nn-workflow-card__body">
+
+      <!-- Vergleich Heute / Mit NN -->
+      <div class="nn-comparison">
+        <div class="nn-comparison__before">
+          <h3>Heute</h3>
+          <p>
+            Postfach prüfen, Fristen suchen, Antworten manuell verfassen,
+            Wiedervorlagen im Kopf behalten. Wichtiges geht im Rauschen unter.
+          </p>
+        </div>
+        <div class="nn-comparison__after">
+          <h3>Mit Neural Nautic</h3>
+          <p>
+            Priorisierte Inbox, vorbereitete Entwürfe mit Bezug auf vorherige
+            Threads und CRM-Kontext, Fristen automatisch erkannt, Wiedervorlagen
+            geplant — und vor jeder Außenwirkung ein klarer Freigabeschritt.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tech Detail -->
+      <details class="nn-tech-detail">
+        <summary>Was steckt drin</summary>
+        <div class="nn-tech-detail__body">
+
+          <div class="nn-tech-section">
+            <h4>Architektur</h4>
+            <p>
+              Anbindung an Microsoft&nbsp;365 oder Google Workspace über offizielle APIs
+              (Graph&nbsp;/ Gmail) · Klassifikation per LLM nach Dringlichkeit, Absendertyp
+              und Geschäftsrelevanz · Stilanpassung über Few-Shot-Prompting auf Basis
+              Ihrer historischen Antworten · alle Modellaufrufe gehen über
+              <code>LiteLLM</code>-Gateway in DSGVO-konformer EU-Region.
+            </p>
+          </div>
+
+          <div class="nn-tech-section">
+            <h4>Compliance</h4>
+            <p>
+              Inhalte verlassen niemals den europäischen Rechtsraum. Kein Training
+              auf Ihren Daten. Vollständiges Audit-Log jeder Aktion. Konfigurierbare
+              Stopp-Regeln für sensible Empfänger (Behörden, Anwälte, Betriebsrat).
+            </p>
+          </div>
+
+        </div>
+      </details>
+
+    </div>
+  </article>
+
+</main>
+
+<footer class="nn-footer">
+  <div class="nn-footer__monogram">✦ NN</div>
+  <p class="nn-footer__tagline">Stille Tiefe. Präzise Navigation.</p>
+  <p class="nn-footer__legal">
+    Hosting in Deutschland · DSGVO-konform · keine Datenweitergabe an Drittländer<br>
+    <a href="mailto:frankschuettai@neuralnautic.org">frankschuettai@neuralnautic.org</a>
+  </p>
+</footer>
+
+<script src="assets/js/nn.js"></script>
+</body>
+</html>
