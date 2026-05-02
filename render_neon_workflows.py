@@ -334,6 +334,30 @@ CASES = [
             c((1005, 356), (1035, 356), (1015, 541), (1070, 541), RED, "High"),
         ],
     },
+    {
+        "file": OUT / "rag-model-neon-workflow.gif",
+        "kicker": "CASE 03 / RAG MODELL",
+        "headline": "Frage rein. Quellen finden. Antwort belegen.",
+        "nodes": [
+            n(80, 312, 175, 88, CYAN, "FRAGE", "Anliegen", "Was soll beantwortet werden?", "search"),
+            n(310, 185, 185, 84, GREEN, "INDEX", "Wissen", "Dokumente und Textstellen.", "doc"),
+            n(310, 440, 185, 84, BLUE, "FILTER", "Scope", "Nur passende Inhalte.", "code"),
+            n(565, 312, 205, 90, GOLD, "KONTEXT", "Paket", "Kleine Auswahl relevanter Belege.", "doc"),
+            n(835, 225, 190, 88, CYAN, "MODELL", "Antwort", "Formuliert mit Kontext.", "ai"),
+            n(835, 430, 190, 88, GREEN, "BELEGE", "Quellen", "Fundstellen bleiben sichtbar.", "doc"),
+            n(1080, 312, 150, 88, GREEN, "OUT", "Belegt", "Antwort mit Quellen.", "doc"),
+        ],
+        "connections": [
+            c((255, 356), (285, 356), (278, 227), (310, 227), CYAN, "Frage"),
+            c((255, 356), (285, 356), (278, 482), (310, 482), CYAN, "Scope"),
+            c((495, 227), (535, 227), (525, 356), (565, 356), GREEN, "Passagen"),
+            c((495, 482), (535, 482), (525, 356), (565, 356), BLUE, "Auswahl"),
+            c((770, 356), (805, 356), (800, 269), (835, 269), GOLD, "Kontext"),
+            c((770, 356), (805, 356), (800, 474), (835, 474), GOLD, "Belege"),
+            c((1025, 269), (1060, 269), (1052, 356), (1080, 356), CYAN, "Antwort"),
+            c((1025, 474), (1060, 474), (1052, 356), (1080, 356), GREEN, "Quellen"),
+        ],
+    },
 ]
 
 

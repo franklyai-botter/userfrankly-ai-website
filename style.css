@@ -155,7 +155,7 @@ h2 {
 }
 
 .intro .copy {
-  min-height: 330px;
+  min-height: 420px;
   padding: 24px 26px;
   align-content: start;
 }
@@ -233,10 +233,10 @@ section.intro .copy h1.intro-title {
 
 .intro .explain {
   align-self: start;
-  min-height: 330px;
+  min-height: 420px;
   margin-top: 0;
   gap: 12px;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .page:not(.intro) .explain {
@@ -291,7 +291,8 @@ section.intro .copy h1.intro-title {
 
 .scenario-card:nth-child(1)::before { background: var(--cyan); }
 .scenario-card:nth-child(2)::before { background: var(--green); }
-.scenario-card:nth-child(3)::before { background: var(--gold); }
+.scenario-card:nth-child(3)::before { background: var(--blue); }
+.scenario-card:nth-child(4)::before { background: var(--gold); }
 
 .page:not(.intro) .risk-explain {
   grid-template-columns: repeat(3, minmax(0, 1fr));
